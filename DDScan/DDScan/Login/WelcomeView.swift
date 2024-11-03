@@ -25,7 +25,7 @@ struct WelcomeView: View {
                 Spacer()
                 Spacer()
                 
-                NavigationLink(destination: CreatView(isUsername: .constant(isUsername), isLogin: .constant(isLogin))) {
+                NavigationLink(destination: CreatView(isUsername: $isUsername, isLogin: $isLogin)) {
                     Text("Create an account")
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -40,7 +40,7 @@ struct WelcomeView: View {
                 )
                 .padding(.top)
 
-                NavigationLink(destination: LoginView(isUsername: .constant(isUsername), isLogin: .constant(isLogin))) {
+                NavigationLink(destination: LoginView(isUsername: $isUsername, isLogin: $isLogin)) {
                     Text("Login")
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)
