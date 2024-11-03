@@ -32,7 +32,7 @@ struct HomeView: View {
                 
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(mangas, id: \.id) { manga in
-                        NavigationLink(destination: MangaView(mangaName: .constant(manga.name), scanid: .constant(ScanID.list))) {
+                        NavigationLink(destination: MangaView(manga: .constant(manga))) {
                                 MangaItemView(manga: manga)
                                     .frame(minWidth: 0, minHeight: 200, alignment: .top)
                                         .background(Color.clear)

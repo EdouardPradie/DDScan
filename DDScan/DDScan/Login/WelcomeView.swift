@@ -25,9 +25,7 @@ struct WelcomeView: View {
                 Spacer()
                 Spacer()
                 
-                Button(action: {
-                    creat.toggle()
-                }) {
+                NavigationLink(destination: CreatView(isUsername: .constant(isUsername), isLogin: .constant(isLogin))) {
                     Text("Create an account")
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -42,10 +40,7 @@ struct WelcomeView: View {
                 )
                 .padding(.top)
 
-                Button(action: {
-                    login.toggle()
-                }
-                ) {
+                NavigationLink(destination: LoginView(isUsername: .constant(isUsername), isLogin: .constant(isLogin))) {
                     Text("Login")
                         .padding()
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -61,15 +56,6 @@ struct WelcomeView: View {
                 .padding(.top)
 
                 Spacer()
-                
-                NavigationLink(destination: CreatView(isUsername: $isUsername, isLogin: $isLogin), isActive: $creat) {
-                    EmptyView()
-                }
-                
-                NavigationLink(destination: LoginView(isUsername: $isUsername, isLogin: $isLogin), isActive: $login) {
-                    EmptyView()
-                }
-
             }
             .padding()
             .background(Image("background"))
