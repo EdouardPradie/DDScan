@@ -27,7 +27,6 @@ func fetchChapterImages(chapterID: String, completion: @escaping ([String]) -> V
     guard let url = URL(string: urlString) else { return }
 
     URLSession.shared.dataTask(with: url) { data, response, error in
-        // Gestion des erreurs
         if let error = error {
             print("Erreur lors de la récupération des images : \(error)")
             completion([])
@@ -44,7 +43,6 @@ func fetchChapterImages(chapterID: String, completion: @escaping ([String]) -> V
             return
         }
 
-        // Construire les URLs des images
         let imageUrls = pageHashes.map { "\(baseUrl)/data/\(chapterHash)/\($0)" }
         completion(imageUrls)
     }.resume()
