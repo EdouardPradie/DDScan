@@ -11,11 +11,11 @@ DDScan is a mobile application built with SwiftUI for reading manga scans!
 
 
 ### Welcome Screen
-![Welcome Screen](assets/welcome.png)
+<img src="assets/welcome.png" alt="Welcome Screen" width="400px">
 
 ### Home Screen
-![Home Screen](assets/home.png)
+<img src="assets/home.png" alt="Home Screen" width="400px">
 
 ### Chapter Reading
-![Chapter Reading1](assets/scan1.png)
-![Chapter Reading2](assets/scan2.png)
+<img src="assets/scan1.png" alt="Scan1 Screen" width="400px">
+<img src="assets/scan2.png" alt="Scan2 Screen" width="400px">
