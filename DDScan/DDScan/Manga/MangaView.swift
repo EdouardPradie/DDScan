@@ -70,7 +70,6 @@ struct MangaView: View {
                         }
                     }
                     .padding()
-                    .background(Color(red: 234 / 255, green: 114 / 255, blue: 74 / 255))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .cornerRadius(20)
 
